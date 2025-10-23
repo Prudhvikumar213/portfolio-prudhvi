@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prudhvi Kumar | Portfolio</title>
+  <link rel="icon" href="https://www.clker.com/cliparts/9/c/a/9/133181080294472335portfolio-hi.png">
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header / Navbar */
+    header {
+      background:#333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: solid 2px #00bcd4;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-align: left;
+      color:whitesmoke;
+    }
+
+    header p a {
+      color:whitesmoke;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+      
+    }
+    header p a:hover {
+      color:#edbe6e;
+      text-decoration:wavy;
+    }
+
+    /* Layout */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      
+    }
+    .home,button a:hover{
+      color: black; 
+      text-decoration: wavy;
+    }
+
+    
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 20px;
+    }
+
+    
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* hidden at first */
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+    .sidebar.active {
+      left:0; /* show sidebar */
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* ====== Close Button ====== */
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .about{
+      color: #F5F5F4;
+      margin-top: 15%;
+    }
+    .skills{
+      text-align: center;
+      width: 100%;
+      margin-top: 30%;
+      color: #F5F5F4;text-decoration: none;
+    }
+
+    .skills-grid {
+    margin-top: 40%;
+    display:flex;
+    flex-wrap: wrap  ;
+    justify-content: center;
+    flex: 25% 30% 15%;
+    gap: 60px;
+    max-width: 1200%;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
+  .skill-card {
+    flex: 1 1 calc(25% - 40px); /* 4 items per row minus gap */
+    margin-top: 5%;
+    background: #444;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px);
+    background: #18CC9C;
+  }
+
+  .skill-card img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .skill-card p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #f5f5f5;
+  }
+
+  @media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  header p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .skills-grid {
+    gap: 20px;
+  }
+
+  .skill-card {
+    flex: 1 1 45%; /* 2 per row */
+    padding: 20px;
+  }
+
+  .skill-card img {
+    width: 50px;
+    height: 40px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 80%;
+    flex: none;
+  }
+
+  .skill-card p {
+    font-size: 16px;
+  }
+}
+    
+header a {
+  text-decoration: none;
+  color: #18CC9C;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+header a:hover {
+  color: #00bcd4;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+/* Active link (current page) */
+header a.active {
+  color: #00bcd4;
+  
+
+}
+
+
+ html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* header height */
+  }
+  </style>
+</head>
+<body style="background-color:#333">
+ 
+
+  <header>
+    <div style="display: flex;align-items: center; ">
+      <h1>Ṗṛüḋḧṿïḳüṁäṛ  | </h1>
+      <p style="margin-left: 1%; color:#a45a3d">   𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</p>
+      <p style="margin-left: 48%; color: #9a8c9a; font-size:medium">
+        <a href="#home "class="active" >🅗🅞🅜🅔</a><i style="color: red;"> ♥|</i>
+        <a href="project.html" >🄿🅁🄾🄹🄴🄲🅃</a><i style="color: red;"> ♥|</i>
+        <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a> <i style="color: red;"> ♥|</i>
+        <a href="#profileBtn" id="profileBtn" >͓̽p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+   
+  <main >
+    <div id="home" class="home" style="width: 97%; height: 78%; background-image: url(https://wallpaperaccess.com/full/5651978.png); border-radius: 20%; background-color:#333; border-radius: 12px;cursor: pointer; font-weight: bold;margin: 0 15px; box-shadow: 2px 2px 5px; border-bottom-right-radius: 100%; border-top-right-radius:100%; border-bottom-left-radius: 5%; border-top-left-radius: 5%; margin-top: 5%;">
+        <section  >
+        <img src="kumar2.png" alt="image" style="float:right; width: 30%; height: auto;   border-radius: 12px;cursor: pointer; font-weight: bold;margin: 0 15px; box-shadow: 2px 2px 5px black; border-radius: 50%; margin-right: 0%; background-color: #111;">
+        <p style="font-size:120% ; margin-top: 3%; margin-left: 2%; padding-bottom: 0%; padding-top: 7%;color: #F5F5F4;">𝑯𝒆𝒍𝒍𝒐 <br style="padding-left: 5%;"> 𝑰'𝒎 <strong style="color:#18CC9C ;font-size: 150%;"> 𝑴𝒂𝒕𝒕𝒆𝒃𝒉𝒂𝒎 𝑽𝒆𝒏𝒌𝒂𝒕𝒂 𝑷𝒓𝒖𝒅𝒉𝒗𝒊𝑲𝒖𝒎𝒂𝒓 </strong> <br>Full Stack Python Developer <br> <i style="font-size:x-small;"> • Flask • MySQL • MongoDB | Passionate about coding,  problem-solving, and building modern web applications.</i></p>
+        
+        
+        <a href="contact us.html"><button  style="padding: 16px 32px; font-size: 20px; border: none;color:black;border-radius: 12px;cursor: pointer; font-weight: bold;margin: 0 15px; box-shadow: 2px 2px 5px;margin-left:10%;margin-top: 5%; background-color:#333 ; border: solid #18CC9C; color: #18CC9C; ">𝓒𝓸𝓷𝓽𝓪𝓬𝓽 𝓤𝓼</button></a>
+        <a href="main resume.pdf"><button  style="padding: 16px 32px; font-size: 20px; border: none;color:black;border-radius: 12px;cursor: pointer; font-weight: bold;margin: 0 15px; box-shadow: 2px 2px 5px;margin-left:10%;margin-top: 5%; background-color:#333 ; border: solid #18CC9C; color:#18CC9C; ">𝓡𝓮𝓼𝓾𝓶𝓮</button></a>
+
+        </section>
+    </div>
+
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <img src="kumar1.jpg" alt="image" width="50%" height="30%" style="float: center; border-radius: 150%; margin-left: 25%;" >
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <a href="main resume.pdf" onclick="closeBtn">𝓡𝓮𝓼𝓾𝓶𝓮</a>
+      <a href="#skills" onclick="closeSidebar()">𝓢𝓴𝓲𝓵𝓵𝓼</a>
+      <a href="project.html">𝓟𝓻𝓸𝓳𝓮𝓬𝓽𝓼</a>
+      <a href="internship.html">𝓘𝓷𝓽𝓮𝓻𝓷𝓼𝓱𝓲𝓹</a>
+      <a href="education.html">𝓔𝓭𝓾𝓬𝓪𝓽𝓲𝓸𝓷</a>     
+      <a href="certifications.html"> 𝓒𝓔𝓡𝓣𝓘𝓕𝓘𝓒𝓐𝓣𝓘𝓞𝓝</a>
+      <a href="contact us.html">𝓒𝓸𝓷𝓽𝓪𝓬𝓽</a> 
+      <a href="#about" onclick="closeSidebar()">𝓐𝓫𝓸𝓾𝓽 𝓤𝓼</a>
+      
+    </div>
+
+
+    <div class="about" id="about">
+      <div  id="aboutme" class="aboutme">
+        <p><h1  style="text-align: center;"> 𝔞𝔟𝔬𝔲𝔱</h1></p>
+        <p style="font-size:150% ; margin-top: 3%; margin-left: 2%; padding-bottom: 0%; padding-top: 3%; color:#F5F5F4; ;"> <mark style="background-color: #333; color:#edbe6e;">────</mark>𝖨 𝖺𝗆 𝖺 𝖿𝗂𝗇𝖺𝗅-𝗒𝖾𝖺𝗋 𝖡.𝖳𝖾𝖼𝗁 𝗌𝗍𝗎𝖽𝖾𝗇𝗍 𝗌𝗉𝖾𝖼𝗂𝖺𝗅𝗂𝗓𝗂𝗇𝗀 𝗂𝗇 𝖠𝗋𝗍𝗂𝖿𝗂𝖼𝗂𝖺𝗅 𝖨𝗇𝗍𝖾𝗅𝗅𝗂𝗀𝖾𝗇𝖼𝖾 𝖺𝗇𝖽 𝖣𝖺𝗍𝖺 𝖲𝖼𝗂𝖾𝗇𝖼𝖾 𝖿𝗋𝗈𝗆 𝖯𝖺𝖼𝖾 𝖨𝗇𝗌𝗍𝗂𝗍𝗎𝗍𝖾𝗌 𝗈𝖿 𝖳𝖾𝖼𝗁𝗇𝗈𝗅𝗈𝗀𝗒 & 𝖲𝖼𝗂𝖾𝗇𝖼𝖾𝗌. 𝖨’𝗆 𝗉𝖺𝗌𝗌𝗂𝗈𝗇𝖺𝗍𝖾 𝖺𝖻𝗈𝗎𝗍 𝗐𝖾𝖻 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝗆𝖾𝗇𝗍 𝖺𝗇𝖽 𝗉𝗋𝗈𝖻𝗅𝖾𝗆-𝗌𝗈𝗅𝗏𝗂𝗇𝗀 𝖺𝗇𝖽 𝖺𝗂𝗆 𝗍𝗈 𝖻𝗎𝗂𝗅𝖽 𝖺 <mark style="background-color: #18CC9C;"> 𝖼𝖺𝗋𝖾𝖾𝗋 𝖺𝗌 𝖺 𝖿𝗎𝗅𝗅-𝗌𝗍𝖺𝖼𝗄 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋</mark>, 𝖼𝗋𝖾𝖺𝗍𝗂𝗇𝗀 𝗎𝗌𝖾𝗋-𝖿𝗋𝗂𝖾𝗇𝖽𝗅𝗒, 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍, 𝖺𝗇𝖽 𝗌𝖼𝖺𝗅𝖺𝖻𝗅𝖾 𝖺𝗉𝗉𝗅𝗂𝖼𝖺𝗍𝗂𝗈𝗇𝗌. 𝖨’𝗆 𝖾𝖺𝗀𝖾𝗋 𝗍𝗈 𝗅𝖾𝖺𝗋𝗇 𝗇𝖾𝗐 𝗍𝖾𝖼𝗁𝗇𝗈𝗅𝗈𝗀𝗂𝖾𝗌 𝖺𝗇𝖽 𝖼𝗈𝗇𝗍𝗋𝗂𝖻𝗎𝗍𝖾 𝗍𝗈 𝗂𝗇𝗇𝗈𝗏𝖺𝗍𝗂𝗏𝖾 𝗉𝗋𝗈𝗃𝖾𝖼𝗍𝗌 𝗍𝗁𝖺𝗍 𝗆𝖺𝗄𝖾 𝖺 𝗋𝖾𝖺𝗅 𝗂𝗆𝗉𝖺𝖼𝗍.</p>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="skills" id="skills">
+      <h1 style="padding-bottom: 3%;">𝓢𝓴𝓲𝓵𝓵𝓼</h1>
+      <div class="skills-grid">
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Emblem.png" alt=""  width="80%" height="80%">
+          <p>python</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt=""  width="80%" height="80%">
+          <p>html</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-css-logo-png-transparent-svg-vector-bie-supply-9.png" alt=""  width="80%" height="80%">
+          <p>css</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" alt=""  width="80%" height="80%">
+          <p>javascript</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://www.pngplay.com/wp-content/uploads/7/Mysql-Logo-PNG-Photos.png" alt=""  width="80%" height="80%">
+          <p>Mysql</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://www.pngall.com/wp-content/uploads/13/Mongodb-Transparent.png" alt=""  width="80%" height="80%">
+          <p>Mongodb</p>
+        </div></a>
+
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png" alt=""  width="80%" height="80%">
+          <p>Java</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://toppng.com/uploads/preview/c-programming-icon-c-programming-language-logo-11562945679duaxtn3yq0.png" alt=""  width="80%" height="80%">
+          <p>C programming</p>
+        </div></a>
+
+        <a href="skills.html"><div  class="skill-card">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.fxY1GPzkawFi7TfGj1E8JAHaEn?pid=Api&P=0&h=220" alt=""  width="80%" height="80%">
+          <p>Cybersecurity</p>
+        </div></a>
+
+      </div>
+      
+
+    </div>
+    <script>
+  const sidebar = document.getElementById('sidebar');
+  const profileBtn = document.getElementById('profileBtn');
+  const closeBtn = document.getElementById('closeBtn');
+
+  profileBtn.onclick = () => {
+    sidebar.classList.add('active');
+  };
+
+  closeBtn.onclick = () => {
+    sidebar.classList.remove('active');
+  };
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+  }
+
+  
+</script>
+
+ 
+    
+  </main>
+
+
+  <!-- Footer -->
+  <footer style="margin-top: 5.5%;">
+    <p> █▓▒▒░░░ ͓̽P͓͓̽̽r͓͓̽̽u͓͓̽̽d͓͓̽̽h͓͓̽̽v͓͓̽̽i͓͓̽̽K͓͓̽̽u͓͓̽̽m͓̽a͓͓̽̽𝖗 |𝖕𝖔𝖗𝖙𝖋𝖔𝖑𝖎𝖔 ░░░▒▒▓█</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+    
+    

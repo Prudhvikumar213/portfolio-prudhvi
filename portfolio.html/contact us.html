@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prudhvi Kumar | Portfolio</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9539/9539675.png">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #333;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header / Navbar */
+    header {
+      background:#333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: solid 2px #00bcd4;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-align: left;
+      color:white;
+    }
+
+    header p a {
+      color:whitesmoke;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+      
+    }
+    header p a:hover {
+      color:#edbe6e;
+      text-decoration:wavy;
+    }
+
+    /* Layout */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      
+    }
+    .home,button a:hover{
+      color: black; 
+      text-decoration: wavy;
+    }
+
+    
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 20px;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* hidden at first */
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+    .sidebar.active {
+      left:0; /* show sidebar */
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* ====== Close Button ====== */
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .contact{
+      color: white;
+       background: #444; /* dark background */
+       text-align: center;
+       text-underline-position: above;
+      padding: 40px;
+      border-top: 2px solid #edbe6e;
+      border-bottom: 2px solid #edbe6e;
+      width: 100%;
+      margin-top: -2%;
+      padding-top: -10%;
+
+      
+    }
+
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* hidden at first */
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+      z-index: 1000;
+      
+    }
+    .sidebar.active {
+      left:0; /* show sidebar */
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* ====== Close Button ====== */
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    #email {
+  display: flex;
+  align-items: center;   /* align icon and text vertically */
+  gap: 12px;             /* space between icon and text */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.icon-box {
+  font-size: 28px;       /* size of the icon */
+  color: #edbe6e;        /* golden icon color */
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 3%;
+  width: 20%;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column; /* stack EMAIL above div */
+  
+}
+
+.text-box .label {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;           /* lighter small text */
+  margin-bottom: 0%;
+}
+
+.text-box a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.text-box a:hover {
+  color: #edbe6e;        /* hover effect */
+}
+.box{
+  
+     
+  text-align: center;
+  width: 60%;
+  background: #333;
+  color: white;
+ 
+  transition: 0.3s;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+  
+  border-radius: 10%;
+  
+}
+#contact {
+  padding: 60px 10%;
+  background: #222;
+  color: #f5f5f5;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  border-radius: 7%;
+}
+
+#contact h2 {
+  color: #edbe6e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#contact p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.contact-info p {
+  margin: 12px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #edbe6e;
+  font-size: 1.2rem;
+}
+
+.social-links {
+  margin-top: 20px;
+  padding-top: 10%;
+}
+
+.social-links a {
+  color: #edbe6e;
+  font-size: 1.5rem;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+button:hover{
+  background: #fff;
+  color:black;
+  transform: scale(1.05);
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .contact-info p {
+    justify-content: center;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+  /* Container stacks vertically */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* smaller gap on mobile */
+    padding: 0 10px;
+  }
+
+  /* Contact info and form full width */
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Adjust text alignment for contact info */
+  .contact-info p {
+    justify-content: center;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  /* Social links center alignment and smaller size */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 15px;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+
+  /* Contact form inputs full width */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Button adjustment */
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Section padding smaller */
+  #contact {
+    padding: 40px 5%;
+    border-radius: 5%;
+  }
+
+  #contact h2 {
+    font-size: 1.6rem;
+  }
+
+  #contact p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  /* Icon box adjustments */
+  .icon-box {
+    width: 25%;
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 0;
+  }
+
+  .text-box .label {
+    font-size: 11px;
+  }
+
+  .text-box a {
+    font-size: 14px;
+  }
+}
+header a {
+  text-decoration: none;
+  color: #18CC9C;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+header a:hover {
+  color: #00bcd4;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+/* Active link (current page) */
+header a.active {
+  color: #00bcd4;
+  
+
+}
+
+    
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="background: color #333;">
+ 
+
+  <header>
+    <div style="display: flex;align-items: center;">
+        
+      <h1>Ṗṛüḋḧṿïḳüṁäṛ  | </h1>
+      <p style="margin-left: 1%; color:#a45a3d">   𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</p>
+      <p style="margin-left: 48%; color: #9a8c9a;">
+        <a href="po1.html#home">🅗🅞🅜🅔</a> <i style="color: red;"> ♥|</i>
+        <a href="project.html">🄿🅁🄾🄹🄴🄲🅃</a> <i style="color: red;"> ♥|</i>
+        <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a><i style="color: red;"> ♥|</i>
+        <a href="#profileBtn" id="profileBtn">͓̽p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
+      </p>
+    </div>
+    
+  </header>
+
+   
+  <main >
+    
+    
+    <div class="sidebar" id="sidebar">
+      <img src="kumar1.jpg" alt="image" width="50%" height="30%" style="float: center; border-radius: 150%; margin-left: 25%;" >
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <a href="main resume.pdf" onclick="closeBtn">𝓡𝓮𝓼𝓾𝓶𝓮</a>
+      <a href="po1.html#skills" onclick="closeSidebar()">𝓢𝓴𝓲𝓵𝓵𝓼</a>
+      <a href="project.html">𝓟𝓻𝓸𝓳𝓮𝓬𝓽𝓼</a>
+      <a href="internship.html">𝓘𝓷𝓽𝓮𝓻𝓷𝓼𝓱𝓲𝓹</a>
+      <a href="education.html">𝓔𝓭𝓾𝓬𝓪𝓽𝓲𝓸𝓷</a>     
+      <a href="certifications.html"> 𝓒𝓔𝓡𝓣𝓘𝓕𝓘𝓒𝓐𝓣𝓘𝓞𝓝</a>
+      <a href="#contact">𝓒𝓸𝓷𝓽𝓪𝓬𝓽</a> 
+      <a href="po1.html#about" onclick="closeSidebar()">𝓐𝓫𝓸𝓾𝓽 𝓤𝓼</a>
+      
+    </div>
+    
+
+    <script>
+      const sidebar = document.getElementById('sidebar');
+      const profileBtn = document.getElementById('profileBtn');
+      const closeBtn = document.getElementById('closeBtn');
+
+      profileBtn.onclick = () => {
+        sidebar.classList.add('active');
+      };
+
+      closeBtn.onclick = () => {
+        sidebar.classList.remove('active');
+      };
+
+      function closeSidebar() {
+        sidebar.classList.remove('active');
+      }
+
+      
+    </script>
+
+    <div class="homeslidebar" id="homeslidebar" style="width: 30%; height: 1000%; color: white; text-align: center; background-color: #222; margin-left: 0%; border-radius: 10%;">
+        <img src="kumar1.jpg" alt=" image" width="50%"  height="50%" style="border-radius: 30%; border: solid 2px #edbe6e; float: right; margin-top: 6%; margin-right: 25%;">
+        <h2>𝚅𝚎𝚗𝚔𝚊𝚝𝚊 𝙿𝚛𝚞𝚍𝚑𝚟𝚒 𝙺𝚞𝚖𝚊𝚛</h2>
+        <h5 style="margin-top: 2%; background-color: #666;width: 55%; margin-left: 22%; border-radius: 3%; margin-bottom: 8%;">𝙵𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</h5>
+        <div id="email" style="margin-bottom: 4%; border-top: solid 1px whitesmoke; padding-top: 10%;">
+          <div class="icon-box">
+            <i class="fa-solid fa-envelope"> </i>
+          </div>
+          <div class="text-box">
+            <div class="label">𝙴𝚖𝚊𝚒𝚕</div>
+            <a href="mailto:23kq5a5404aids@gmail.com">23𝙺𝚀5𝙰5404𝚊𝚒𝚍𝚜@𝙶𝚖𝚊𝚒𝚕.𝙲𝚘𝚖</a>
+          </div>
+        </div>
+        <div id="email" style="margin-bottom: 4%;">
+          <div class="icon-box">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="text-box">
+            <div class="label">𝙿𝚑𝚘𝚗𝚎</div>
+            
+            <a href="tel:91+ 9390966920">9390966920</a>
+          </div>
+      </div>
+
+      <div id="email" style="margin-bottom: 4%;">
+          <div class="icon-box">
+            <i class="fa-solid fa-cake-candles"></i>
+          </div>
+          <div class="text-box">
+            <div class="label">Birthday</div>
+            <div>02-𝙰𝚞𝚐𝚞𝚜𝚝-2003</div>
+          </div>
+      </div>
+      <div id="email" style="margin-bottom: 7%; border-bottom: solid 1px white; padding-bottom: 10%;">
+          <div class="icon-box">
+            <i class="fa-solid fa-location-dot" style=" font-size: 20px;"></i>
+          </div>
+          <div class="text-box">
+            <div class="label">𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗</div>
+            <div>𝙿𝚎𝚍𝚍𝚊𝚙𝚊𝚟𝚊𝚗𝚒, 𝙻𝚒𝚗𝚐𝚊 𝚂𝚊𝚖𝚞𝚍𝚛𝚊𝚖<br> 𝙼𝚊𝚗𝚍𝚊𝚕𝚊𝚖, 𝙽𝚎𝚕𝚕𝚘𝚛𝚎 𝙳𝚒𝚜𝚝𝚛𝚒𝚌𝚝, 𝙰𝚗𝚍𝚑𝚛𝚊 𝙿𝚛𝚊𝚍𝚎𝚜𝚑.</div>
+          </div>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/prudhvikumar___523/?next=%2F"  target="_blank"><img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-HD.png" alt="image" width="15%" height="13%" style="margin-right:5% ;"></a>
+        <a href="https://www.facebook.com/prudhvi.kumar.14606936"  target="_blank"><img src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-21.png" alt="image" width="10%" height="8%"></a>
+      </div>
+    </div>
+    <div class="box" id="box">
+      <section id="contact">
+              <h2 style="color: #18CC9C; padding-bottom: 10%; padding-top: 5%; border-bottom: solid white;" >Contact Me</h2>
+
+              <div class="contact-container">
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                  <p><i class="fa-solid fa-envelope" style="color: #18CC9C;"></i> 23kq5a5404aids@gmail.com <button style="margin-left: 35%; width: 25%; height: 10%; background: #18CC9C;color: black;font-weight: bold;border: none;padding: 12px;border-radius: 10px;cursor: pointer;transition: 0.3s;"><a href="mailto:23kq5a5404aids@gmail.com" style="text-decoration: none;">click hear</a></button></p>
+                  <p><i class="fa-solid fa-phone"style="color: #18CC9C;"></i> 9390966920   <button style="margin-left: 56%;width: 25%; height: 10%;background: #18CC9C;color: black;font-weight: bold;border: none;padding: 12px;border-radius: 10px;cursor: pointer;transition: 0.3s;"><a href="tel:91+ 9390966920" style="text-decoration: none;">click hear</a></button></p>
+                  <p><i class="fa-solid fa-location-dot" style="color: #18CC9C; padding-top:0%;"></i>𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗<br>𝙿𝚎𝚍𝚍𝚊𝚙𝚊𝚟𝚊𝚗𝚒, 𝙻𝚒𝚗𝚐𝚊 𝚂𝚊𝚖𝚞𝚍𝚛𝚊𝚖 𝙼𝚊𝚗𝚍𝚊𝚕𝚊𝚖, <br> 𝙽𝚎𝚕𝚕𝚘𝚛𝚎 𝙳𝚒𝚜𝚝𝚛𝚒𝚌𝚝,  𝙰𝚗𝚍𝚑𝚛𝚊 𝙿𝚛𝚊𝚍𝚎𝚜𝚑. </p>
+
+                  <div class="social-links">
+                    <a href="https://github.com/Prudhvikumar213" target="_blank"><i class="fa-brands fa-github" style="padding-right: 2%; color: #18CC9C;;" ></i></a>
+                    <a href="https://www.linkedin.com/in/m-prudhvi-kumar-664092301/" target="_blank"><i class="fa-brands fa-linkedin" style="padding-right: 2%;color: #18CC9C;;"> </i></a>
+                    <a href="mailto:23kq5a5404aids@gmail.com"><i class="fa-solid fa-envelope" style="color: #18CC9C;"></i></a>
+                  </div>
+                </div>
+
+               
+                  
+                </form>
+              </div>
+      </section>
+    </div>
+
+
+    </div>
+    </div>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="margin-top: 5%;">
+    <p>»»»@»»» █▓▒▒░░░2025░░░▒▒▓█ ͓̽P͓͓̽̽r͓͓̽̽u͓͓̽̽d͓͓̽̽h͓͓̽̽v͓͓̽̽i͓͓̽̽K͓͓̽̽u͓͓̽̽m͓̽a͓͓̽̽𝖗 |𝖕𝖔𝖗𝖙𝖋𝖔𝖑𝖎𝖔</p>
+  </footer>
+</body>
+</html>

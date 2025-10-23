@@ -304,21 +304,29 @@
 
 /* ===== Mobile (Below 600px) ===== */
 @media (max-width: 600px) {
+ @media (max-width: 600px) {
   header {
     padding: 10px 0;
+    font-size: 14px;
   }
-
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
+    margin-bottom: 10px;
   }
-
+  header p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+  }
   header p a {
-    display: inline-block;
-    margin: 2px;
-    font-size: 0.9rem;
-    margin-left: 20%;     
-    text-align: left;
+    margin: 4px 0;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   .sidebar {

@@ -115,13 +115,7 @@
       font-size: 24px;
       cursor: pointer;
     }
-    #email {
-  display: flex;
-  align-items: center;   /* align icon and text vertically */
-  gap: 12px;             /* space between icon and text */
-  color: white;
-  font-family: Arial, sans-serif;
-}
+  
 
 .icon-box {
   font-size: 28px;       /* size of the icon */
@@ -323,7 +317,94 @@
       margin-bottom: 20px;
     }
   }
- 
+
+  .homeslidebar{
+    width: 30%; 
+    height: 1000%;
+    color: white;
+    text-align: center;
+    background-color: #222;
+    margin-left: 0%; border-radius: 10%;
+  }
+  .homeslidebar img{
+    border-radius: 30%;
+    border: solid 2px #edbe6e;
+    float: right;
+    margin-top: 6%;
+    margin-right: 25%;
+  }
+
+ .homeslidebar h5{
+  margin-top: 2%; background-color: #666;
+  width: 55%; 
+  margin-left: 22%; 
+  border-radius: 3%; 
+  margin-bottom: 8%;
+ }
+   #email {
+  display: flex;
+  align-items: center;   /* align icon and text vertically */
+  gap: 12px;             /* space between icon and text */
+  color: white;
+  font-family: Arial, sans-serif;
+  margin-bottom: 4%;
+}
+
+@media (max-width: 768px) {
+  .homeslidebar {
+    width: 80%;
+    height: auto;
+    border-radius: 8%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .homeslidebar img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+  }
+
+  .homeslidebar h5 {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 1rem;
+  }
+
+  #email {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Phones and extra small devices (below 480px) */
+@media (max-width: 480px) {
+  .homeslidebar {
+    width: 90%;
+    border-radius: 6%;
+    padding: 10px;
+  }
+
+  .homeslidebar img {
+    width: 100px;
+    height: 100px;
+    margin: 8px auto;
+  }
+
+  .homeslidebar h5 {
+    width: 80%;
+    margin: 8px auto;
+    font-size: 0.9rem;
+  }
+
+  #email {
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+}
     
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -384,10 +465,10 @@
       
     </script>
 
-    <div class="homeslidebar" id="homeslidebar" style="width: 30%; height: 1000%; color: white; text-align: center; background-color: #222; margin-left: 0%; border-radius: 10%;">
-        <img src="kumar1.jpg" alt=" image" width="50%"  height="50%" style="border-radius: 30%; border: solid 2px #edbe6e; float: right; margin-top: 6%; margin-right: 25%;">
+    <div class="homeslidebar" id="homeslidebar" >
+        <img src="kumar1.jpg" alt=" image" width="50%"  height="50%" >
         <h2>𝚅𝚎𝚗𝚔𝚊𝚝𝚊 𝙿𝚛𝚞𝚍𝚑𝚟𝚒 𝙺𝚞𝚖𝚊𝚛</h2>
-        <h5 style="margin-top: 2%; background-color: #666;width: 55%; margin-left: 22%; border-radius: 3%; margin-bottom: 8%;">𝙵𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</h5>
+        <h5 >𝙵𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</h5>
         <div id="email" style="margin-bottom: 4%; border-top: solid 1px whitesmoke; padding-top: 10%;">
           <div class="icon-box">
             <i class="fa-solid fa-envelope"></i>
@@ -397,7 +478,7 @@
             <a href="mailto:23kq5a5404aids@gmail.com">23𝙺𝚀5𝙰5404𝚊𝚒𝚍𝚜@𝙶𝚖𝚊𝚒𝚕.𝙲𝚘𝚖</a>
           </div>
         </div>
-        <div id="email" style="margin-bottom: 4%;">
+        <div id="email" >
           <div class="icon-box">
             <i class="fa-solid fa-phone"></i>
           </div>
@@ -408,7 +489,7 @@
           </div>
       </div>
 
-      <div id="email" style="margin-bottom: 4%;">
+      <div id="email" >
           <div class="icon-box">
             <i class="fa-solid fa-cake-candles"></i>
           </div>
@@ -427,7 +508,7 @@
           </div>
       </div>
       <div>
-        <a href="https://www.instagram.com/prudhvikumar___523/?next=%2F"  target="_blank"><img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-HD.png" alt="image" width="15%" height="13%" style="margin-right:5% ;"></a>
+        <a href="https://www.instagram.com/prudhvikumar___523/?next=%2F"  target="_blank"><img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-HD.png" alt="image" width="15%" height="13%" style="margin-left: -10%;"></a>
         <a href="https://www.facebook.com/prudhvi.kumar.14606936" target="_blank"><img src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-21.png" alt="image" width="10%" height="8%"></a>
       </div>
     </div>

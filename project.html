@@ -117,39 +117,8 @@
     }
   
 
-.icon-box {
-  font-size: 28px;       /* size of the icon */
-  color: #edbe6e;        /* golden icon color */
-  background: #2c2c2c;
-  padding: 10px;
-  border-radius: 10px;
-  margin-left: 3%;
-  width: 20%;
-}
 
-.text-box {
-  display: flex;
-  flex-direction: column; /* stack EMAIL above div */
-  
-}
 
-.text-box .label {
-  text-align: left;
-  font-size: 12px;
-  font-weight: bold;
-  color: #ccc;           /* lighter small text */
-  margin-bottom: 0%;
-}
-
-.text-box a {
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-}
-
-.text-box a:hover {
-  color: #edbe6e;        /* hover effect */
-}
 .box{
   
      
@@ -216,12 +185,7 @@
   }
 
   /* Responsive layout */
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  
 
 
 
@@ -230,93 +194,7 @@
 
 
 
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 0;
-  }
-  header p {
-    text-align: center;
-    margin-top: 10px;
-  }
 
-  #email {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .icon-box {
-    width: 50px;
-    margin-left: 0;
-  }
-  .text-box a {
-    font-size: 14px;
-  }
-
-  .box {
-    width: 90%;
-    padding: 30px;
-  }
-  .timeline {
-    margin-left: 50px;
-  }
-  .line {
-    left: -100px;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.3rem;
-  }
-
-  #email {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .icon-box {
-    width: auto;
-    margin: 0;
-  }
-  .text-box .label {
-    font-size: 10px;
-  }
-  .text-box a {
-    font-size: 14px;
-  }
-
-  .box {
-    width: 95%;
-    padding: 20px;
-  }
-  .timeline {
-    margin-left: 20px;
-    padding-left: 20px;
-  }
-  .line {
-    position: relative;
-    left: 0;
-    display: inline-block;
-  }
-}
-
- .portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(237, 190, 110, 0.5);
-  }
-
-  @media (max-width: 768px) {
-    .portfolio-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .portfolio-card {
-      width: 90%;
-      margin-bottom: 20px;
-    }
-  }
 
   .homeslidebar{
     width: 30%; 
@@ -343,70 +221,179 @@
  }
    #email {
   display: flex;
-  align-items: center;   /* align icon and text vertically */
-  gap: 12px;             /* space between icon and text */
+  align-items: center; 
+  gap: 12px;             
   color: white;
   font-family: Arial, sans-serif;
   margin-bottom: 4%;
   
 }
+.icon-box {
+  font-size: 28px;      
+  color: #edbe6e;        
+  background: #2c2c2c;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 3%;
+  width: 20%;
+}
 
-@media (max-width: 768px) {
+.text-box {
+  display: flex;
+  flex-direction: column; 
+  
+}
+
+.text-box .label {
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;           
+  margin-bottom: 0%;
+}
+
+.text-box a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.text-box a:hover {
+  color: #edbe6e;        
+}
+
+
+@media (max-width: 992px) {
+  header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .homeslidebar {
-    width: 80%;
-    height: auto;
-    border-radius: 8%;
+    width: 70%;
+    float: none;
     margin: 20px auto;
-    padding: 15px;
   }
 
   .homeslidebar img {
     float: none;
-    display: block;
     margin: 10px auto;
+    display: block;
     width: 120px;
     height: 120px;
   }
 
-  .homeslidebar h5 {
-    width: 70%;
-    margin: 10px auto;
-    font-size: 1rem;
+  .box {
+    width: 80%;
+  }
+
+  .card {
+    width: 90%;
   }
 
   #email {
     flex-direction: column;
-    gap: 6px;
-    font-size: 0.95rem;
+    gap: 8px;
   }
 }
 
-/* Phones and extra small devices (below 480px) */
-@media (max-width: 480px) {
+/* ===== Mobile (Below 600px) ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 0;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  header p a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 0.9rem;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
   .homeslidebar {
     width: 90%;
     border-radius: 6%;
-    padding: 10px;
+    padding: 15px;
   }
 
   .homeslidebar img {
     width: 100px;
     height: 100px;
-    margin: 8px auto;
   }
 
   .homeslidebar h5 {
     width: 80%;
-    margin: 8px auto;
     font-size: 0.9rem;
   }
 
   #email {
     font-size: 0.85rem;
-    gap: 5px;
+    gap: 6px;
+  }
+
+  .icon-box {
+    font-size: 22px;
+    width: 15%;
+    padding: 8px;
+  }
+
+  .text-box a {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 10px;
   }
 }
-    
+
+/* ===== Small Phones (Below 400px) ===== */
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .homeslidebar img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .homeslidebar h5 {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+
+  #email {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}    
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>

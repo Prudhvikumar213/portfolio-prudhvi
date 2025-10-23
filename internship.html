@@ -38,16 +38,21 @@
       color:white;
     }
 
-    header p a {
-      color:whitesmoke;
+     header p a {
+      color: whitesmoke;
       margin: 0 10px;
       text-decoration: none;
       transition: 0.3s;
       
     }
     header p a:hover {
-      color:#edbe6e;
+      color:#edbe6e;;
       text-decoration:wavy;
+      text-shadow: 0 0 10px #00bcd4;
+    }
+
+    header a.active {
+  color: #00bcd4;
     }
 
     /* Layout */
@@ -378,24 +383,7 @@ display: block;
     font-size: 0.9rem;
   }
 }
-header a {
-  text-decoration: none;
-  color: #18CC9C;
-  transition: 0.3s;
-}
 
-/* Hover effect */
-header a:hover {
-  color: #00bcd4;
-  text-shadow: 0 0 10px #00bcd4;
-}
-
-/* Active link (current page) */
-header a.active {
-  color: #00bcd4;
-  
-
-}
 
     
   </style>

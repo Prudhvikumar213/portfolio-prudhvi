@@ -347,8 +347,6 @@ button:hover{
     justify-content: center;
   }
 }
-
-/* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
   /* Container stacks vertically */
   .contact-container {
@@ -358,22 +356,8 @@ button:hover{
     padding: 0 10px;
   }
 
-  /* Contact info and form full width */
-  .contact-info,
-  .contact-form {
-    flex: 1 1 100%;
-    width: 100%;
-    text-align: center;
-  }
+  
 
-  /* Adjust text alignment for contact info */
-  .contact-info p {
-    justify-content: center;
-    font-size: 0.9rem;
-    gap: 8px;
-  }
-
-  /* Social links center alignment and smaller size */
   .social-links {
     display: flex;
     justify-content: center;
@@ -385,7 +369,6 @@ button:hover{
     font-size: 1.3rem;
   }
 
-  /* Contact form inputs full width */
   .contact-form input,
   .contact-form textarea {
     width: 100%;
@@ -393,14 +376,13 @@ button:hover{
     padding: 10px;
   }
 
-  /* Button adjustment */
   .contact-form button {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
   }
 
-  /* Section padding smaller */
+
   #contact {
     padding: 40px 5%;
     border-radius: 5%;
@@ -415,7 +397,7 @@ button:hover{
     margin-bottom: 30px;
   }
 
-  /* Icon box adjustments */
+
   .icon-box {
     width: 25%;
     font-size: 24px;
@@ -633,6 +615,54 @@ button:hover{
     height: 45px;
   }
 }
+.contact-info {
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+.contact-info i {
+  color: #18CC9C;
+  margin-right: 8px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-info strong {
+  color: #18CC9C;
+}
+
+.contact-btn {
+  margin-left: 15px;
+  background: #18CC9C;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #0fa87d;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive (for mobile) */
+@media (max-width: 600px) {
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-btn {
+    display: block;
+    margin: 10px auto;
+  }
+}
 
     
   </style>
@@ -755,16 +785,30 @@ button:hover{
 
                 <!-- Contact Information -->
                 <div class="contact-info">
-                  <p><i class="fa-solid fa-envelope" style="color: #18CC9C;"></i> 23kq5a5404aids@gmail.com <button style="margin-left: 35%; width: 25%; height: 10%; background: #18CC9C;color: black;font-weight: bold;border: none;padding: 12px;border-radius: 10px;cursor: pointer;transition: 0.3s;"><a href="mailto:23kq5a5404aids@gmail.com" style="text-decoration: none;">click hear</a></button></p>
-                  <p><i class="fa-solid fa-phone"style="color: #18CC9C;"></i> 9390966920   <button style="margin-left: 56%;width: 25%; height: 10%;background: #18CC9C;color: black;font-weight: bold;border: none;padding: 12px;border-radius: 10px;cursor: pointer;transition: 0.3s;"><a href="tel:91+ 9390966920" style="text-decoration: none;">click hear</a></button></p>
-                  <p><i class="fa-solid fa-location-dot" style="color: #18CC9C; padding-top:0%;"></i>𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗<br>𝙿𝚎𝚍𝚍𝚊𝚙𝚊𝚟𝚊𝚗𝚒, 𝙻𝚒𝚗𝚐𝚊 𝚂𝚊𝚖𝚞𝚍𝚛𝚊𝚖 𝙼𝚊𝚗𝚍𝚊𝚕𝚊𝚖, <br> 𝙽𝚎𝚕𝚕𝚘𝚛𝚎 𝙳𝚒𝚜𝚝𝚛𝚒𝚌𝚝,  𝙰𝚗𝚍𝚑𝚛𝚊 𝙿𝚛𝚊𝚍𝚎𝚜𝚑. </p>
-
-                  <div class="social-links">
-                    <a href="https://github.com/Prudhvikumar213" target="_blank"><i class="fa-brands fa-github" style="padding-right: 2%; color: #18CC9C;;" ></i></a>
-                    <a href="https://www.linkedin.com/in/m-prudhvi-kumar-664092301/" target="_blank"><i class="fa-brands fa-linkedin" style="padding-right: 2%;color: #18CC9C;;"> </i></a>
-                    <a href="mailto:23kq5a5404aids@gmail.com"><i class="fa-solid fa-envelope" style="color: #18CC9C;"></i></a>
+                   <p>
+                      <i class="fa-solid fa-envelope"></i>
+                      <strong>Email:</strong> 23kq5a5404aids@gmail.com
+                      <a href="mailto:23kq5a5404aids@gmail.com" class="contact-btn">Click Here</a>
+                    </p>
+                  
+                    <p>
+                      <i class="fa-solid fa-phone"></i>
+                      <strong>Phone:</strong> 9390966920
+                      <a href="tel:+919390966920" class="contact-btn">Click Here</a>
+                    </p>
+                  
+                    <p>
+                      <i class="fa-solid fa-location-dot"></i>
+                      <strong>Location:</strong><br>
+                      Peddapavani, Linga Samudram Mandalam,<br>
+                      Nellore District, Andhra Pradesh.
+                    </p>
+                    <div class="social-links">
+                      <a href="https://github.com/Prudhvikumar213" target="_blank"><i class="fa-brands fa-github" style="padding-right: 2%; color: #18CC9C;;" ></i></a>
+                      <a href="https://www.linkedin.com/in/m-prudhvi-kumar-664092301/" target="_blank"><i class="fa-brands fa-linkedin" style="padding-right: 2%;color: #18CC9C;;"> </i></a>
+                      <a href="mailto:23kq5a5404aids@gmail.com"><i class="fa-solid fa-envelope" style="color: #18CC9C;"></i></a>
+                    </div>
                   </div>
-                </div>
 
                
                   

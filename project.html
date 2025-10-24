@@ -22,38 +22,41 @@
 
     /* Header / Navbar */
     header {
-      background:#333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: solid 2px #00bcd4;
-    }
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
 
-    header h1 {
-      font-size: 2rem;
-      text-align: left;
-      color:white;
-    }
+.header-container {
+  display: flex;
+  align-items: center;
+}
 
-     header p a {
-      color: whitesmoke;
-      margin: 0 10px;
-      text-decoration: none;
-      transition: 0.3s;
-      
-    }
-    header p a:hover {
-      color:#edbe6e;;
-      text-decoration:wavy;
-      text-shadow: 0 0 10px #00bcd4;
-    }
+header h1 {
+  font-size: 2rem;
+  margin-left: 2%;
+}
 
-    header a.active {
-  color: #00bcd4;
-    }
+header .subtitle {
+  margin-left: 1%;
+  color: #a45a3d;
+}
+
+header .nav-links {
+  margin-left: 48%;
+  color: #9a8c9a;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: #9a8c9a;
+  margin: 0 4px;
+}
+
+header .nav-links i {
+  color: red;
+}
+
     /* Layout */
     main {
       display: flex;
@@ -304,28 +307,36 @@
 
 /* ===== Mobile (Below 600px) ===== */
  @media (max-width: 600px) {
-  header {
-    padding: 10px 0;
-    font-size: 14px;
-  }
-  header h1 {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  header p {
-    
+  .header-container {
+    flex-direction: column;
     align-items: center;
-    margin: 0%;
-  }
-  header p a {
-    margin: 4px 0;
-    font-size: 1rem;
-    display: block;
-    width: 100%;
     text-align: center;
   }
 
+  header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  header .subtitle {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  header .nav-links {
+    margin: 10px 0 0 0;
+    padding-left: 20px; /* shifts links slightly left */
+  }
+
+  header .nav-links a {
+    display: block; /* one per line */
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+
+  header .nav-links i {
+    display: none; /* hide the ♥ dividers for clean mobile look */
+  }
   .sidebar {
     width: 200px;
   }
@@ -384,18 +395,18 @@
  
 
   <header>
-    <div style="display: flex;align-items: center;">
-      <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
-      <i style="margin-left: 1%; color:#a45a3d">   𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
-      <p style="margin-left: 48%; color: #9a8c9a;">
-        <a href="po1.html#home">🅗🅞🅜🅔</a> <i style="color: red;"> ♥|</i>
-        <a href="project.html" class="active">🄿🅁🄾🄹🄴🄲🅃</a><i style="color: red;"> ♥|</i>
-        <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a><i style="color: red;"> ♥|</i>
-        <a href="#profileBtn" id="profileBtn" >͓̽p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
-      </p>
-      </h1>
-    </div>
-  </header>
+  <div class="header-container">
+    <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
+    <i class="subtitle">𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
+    <p class="nav-links">
+      <a href="po1.html#home">🅗🅞🅜🅔</a> <i> ♥|</i>
+      <a href="project.html" class="active">🄿🅁🄾🄹🄴🄲🅃</a><i> ♥|</i>
+      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a><i> ♥|</i>
+      <a href="#profileBtn" id="profileBtn">p͓̽r͓̽o͓̽f͓̽i͓̽l͓̽e͓̽</a>
+    </p>
+  </div>
+</header>
+
 
    
   <main >

@@ -434,6 +434,45 @@
     height: 45px;
   }
 }
+
+
+
+
+    @media (max-width: 768px) {
+  .skills-grid {
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skills h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 80%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .skill-card img {
+    width: 60%;
+  }
+
+  .skills h1 {
+    font-size: 1.6rem;
+  }
+}
   </style>
 </head>
 <body style="background-color:#333">

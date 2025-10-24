@@ -270,8 +270,9 @@
   }
 }
 
-/* ===== Mobile (Below 600px) ===== */
-/* General Header Styling */
+
+
+
 header {
   background: #333;
   color: white;
@@ -279,6 +280,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: solid 2px #00bcd4;
 }
 
 /* Flex container: name left, links right */
@@ -308,17 +310,26 @@ header {
 }
 
 /* Navigation links */
+
+.nav-links{
+  color: red;
+}
 .nav-links a {
   text-decoration: none;
-  color: #9a8c9a;
+  color: whitesmoke;
   margin-left: 20px;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: red;
+  color:#edbe6e;
+  text-shadow: 0 0 10px #00bcd4;
 }
+
+ header a.active {
+  color: #00bcd4;
+    }
 
 /* Responsive but same layout */
 @media (max-width: 600px) {
@@ -404,17 +415,17 @@ header {
 <body style="background-color:#333">
  
 
-<header>
+ <header>
   <div class="header-container">
     <div class="logo">
       <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
       <i class="subtitle">𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
     </div>
     <nav class="nav-links">
-      <a href="po1.html#home">🅗🅞🅜🅔</a>
-      <a href="project.html">🄿🅁🄾🄹🄴🄲🅃</a>
-      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a>
-      <a href="#profileBtn" id="profileBtn">ρrσfílє</a>
+      <a href="po1.html#home">🅗🅞🅜🅔</a>♥|
+      <a href="project.html" class="active">🄿🅁🄾🄹🄴🄲🅃</a>♥|
+      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a>♥|
+      <a href="#profileBtn" id="profileBtn">p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
     </nav>
   </div>
 </header>

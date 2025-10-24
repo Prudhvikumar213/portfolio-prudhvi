@@ -21,39 +21,132 @@
     }
 
     /* Header / Navbar */
-    header {
-      background:#333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: solid 2px #00bcd4;
-    }
+   header {
+  background: #333;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: solid 2px #00bcd4;
+}
 
-    header h1 {
-      font-size: 2rem;
-      text-align: left;
-      color:white;
-    }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-     header p a {
-      color: whitesmoke;
-      margin: 0 10px;
-      text-decoration: none;
-      transition: 0.3s;
-      
-    }
-    header p a:hover {
-      color:#edbe6e;;
-      text-decoration:wavy;
-      text-shadow: 0 0 10px #00bcd4;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    header a.active {
+.logo h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #a45a3d;
+  font-size: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color:#edbe6e;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+ header a.active {
   color: #00bcd4;
     }
+
+/* Responsive but same layout */
+@media (max-width: 600px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .homeslidebar {
+    width: 90%;
+    border-radius: 6%;
+    padding: 15px;
+  }
+
+  .homeslidebar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .homeslidebar h5 {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  .email-container {
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .icon-box {
+    font-size: 22px;
+    width: 15%;
+    padding: 8px;
+  }
+
+  .text-box a {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}
 
     /* Layout */
     main {
@@ -152,17 +245,41 @@
       font-size: 24px;
       cursor: pointer;
     }
-    #email {
+.homeslidebar{
+    width: 30%; 
+    height: 1000%;
+    color: white;
+    text-align: center;
+    background-color: #222;
+    margin-left: 0%; border-radius: 10%;
+  }
+  .homeslidebar img{
+    border-radius: 30%;
+    border: solid 2px #edbe6e;
+    float: right;
+    margin-top: 6%;
+    margin-right: 25%;
+  }
+
+ .homeslidebar h5{
+  margin-top: 2%; background-color: #666;
+  width: 55%; 
+  margin-left: 22%; 
+  border-radius: 3%; 
+  margin-bottom: 8%;
+ }
+   .email-container {
   display: flex;
-  align-items: center;   /* align icon and text vertically */
-  gap: 12px;             /* space between icon and text */
+  align-items: center; 
+  gap: 12px;             
   color: white;
   font-family: Arial, sans-serif;
+  margin-bottom: 4%;
+  
 }
-
 .icon-box {
-  font-size: 28px;       /* size of the icon */
-  color: #edbe6e;        /* golden icon color */
+  font-size: 28px;      
+  color: #edbe6e;        
   background: #2c2c2c;
   padding: 10px;
   border-radius: 10px;
@@ -172,7 +289,7 @@
 
 .text-box {
   display: flex;
-  flex-direction: column; /* stack EMAIL above div */
+  flex-direction: column; 
   
 }
 
@@ -180,7 +297,7 @@
   text-align: left;
   font-size: 12px;
   font-weight: bold;
-  color: #ccc;           /* lighter small text */
+  color: #ccc;           
   margin-bottom: 0%;
 }
 
@@ -191,7 +308,7 @@
 }
 
 .text-box a:hover {
-  color: #edbe6e;        /* hover effect */
+  color: #edbe6e;        
 }
 .box{
   
@@ -287,15 +404,7 @@ display: block;
 
 
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
 
-  header p a {
-    display: inline-block;
-    margin: 5px;
-  }
 
   main {
     flex-direction: column;
@@ -325,18 +434,6 @@ display: block;
     width: 90%;
     height: auto;
     margin: 20px auto;
-  }
-
-  #email {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-left: 10px;
-  }
-
-  .icon-box {
-    width: auto;
-    margin-left: 0;
   }
 }
 
@@ -385,6 +482,132 @@ display: block;
 }
 
 
+    @media (max-width: 768px) {
+  /* Header adjustments */
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+  }
+
+  /* Main content box */
+  .box {
+    width: 85%;
+    padding: 25px;
+  }
+
+  /* Home slidebar */
+  .homeslidebar {
+    width: 80%;
+    border-radius: 8%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .homeslidebar img {
+    width: 110px;
+    height: 110px;
+    margin: 10px auto;
+    float: none;
+    display: block;
+  }
+
+  .homeslidebar h5 {
+    width: 75%;
+    font-size: 1rem;
+  }
+
+  .email-container {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .icon-box {
+    font-size: 24px;
+    width: 18%;
+    padding: 10px;
+  }
+
+  .text-box a {
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    width: 90%;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  /* Social icons */
+  .social-icons {
+    gap: 18px;
+  }
+
+  .social-icons a img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+      .social-icons {
+  display: flex;                    
+  justify-content: center;           
+  align-items: center;               
+  gap: 20px;                         
+  margin-top: 15px;
+}
+
+.social-icons a img {
+  width: 50px;                       
+  height: 50px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);             
+}
+@media (max-width: 600px) {
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
     
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -393,17 +616,19 @@ display: block;
  
 
   <header>
-    <div style="display: flex;align-items: center;">
-      <h1>Ṗṛüḋḧṿïḳüṁäṛ  | </h1>
-      <p style="margin-left: 1%; color:#a45a3d">   𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</p>
-      <p style="margin-left: 48%; color: #9a8c9a;">
-        <a href="po1.html#home">🅗🅞🅜🅔</a> <i style="color: red;"> ♥|</i>
-        <a href="project.html">🄿🅁🄾🄹🄴🄲🅃</a><i style="color: red;"> ♥|</i>
-        <a href="internship.html"class="active">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a> <i style="color: red;"> ♥|</i>
-        <a href="#profileBtn" id="profileBtn">͓̽p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
-      </p>
+  <div class="header-container">
+    <div class="logo">
+      <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
+      <i class="subtitle">𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
     </div>
-  </header>
+    <nav class="nav-links">
+      <a href="po1.html#home">🅗🅞🅜🅔</a>
+      <a href="project.html" class="active">🄿🅁🄾🄹🄴🄲🅃</a>
+      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a>
+      <a href="#profileBtn" id="profileBtn">p͓͓̽̽r͓͓̽̽o͓͓̽̽f͓͓̽̽i͓͓̽̽l͓͓̽̽e͓̽</a>
+    </nav>
+  </div>
+</header>
 
    
 <main >
@@ -444,20 +669,20 @@ display: block;
       
     </script>
 
-    <div class="homeslidebar" id="homeslidebar" style="width: 30%; height: 1000%; color: white; text-align: center; background-color: #222; margin-left: 0%; border-radius: 10%;">
-        <img src="kumar1.jpg" alt=" image" width="50%"  height="50%" style="border-radius: 30%; border: solid 2px #edbe6e; float: right; margin-top: 6%; margin-right: 25%;">
+     <div class="homeslidebar" id="homeslidebar" >
+        <img src="kumar1.jpg" alt=" image" width="50%"  height="50%" >
         <h2>𝚅𝚎𝚗𝚔𝚊𝚝𝚊 𝙿𝚛𝚞𝚍𝚑𝚟𝚒 𝙺𝚞𝚖𝚊𝚛</h2>
-        <h5 style="margin-top: 2%; background-color: #666;width: 55%; margin-left: 22%; border-radius: 3%; margin-bottom: 8%;">𝙵𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</h5>
-        <div id="email" style="margin-bottom: 4%; border-top: solid 1px whitesmoke; padding-top: 10%;">
+        <h5 >𝙵𝚞𝚕𝚕𝚜𝚝𝚊𝚌𝚔 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</h5>
+        <div class="email-container" style="border-top: solid 1px whitesmoke;" class="email-container">
           <div class="icon-box">
-            <i class="fa-solid fa-envelope"> </i>
+            <i class="fa-solid fa-envelope"></i>
           </div>
           <div class="text-box">
             <div class="label">𝙴𝚖𝚊𝚒𝚕</div>
             <a href="mailto:23kq5a5404aids@gmail.com">23𝙺𝚀5𝙰5404𝚊𝚒𝚍𝚜@𝙶𝚖𝚊𝚒𝚕.𝙲𝚘𝚖</a>
           </div>
         </div>
-        <div id="email" style="margin-bottom: 4%;">
+        <div class="email-container" >
           <div class="icon-box">
             <i class="fa-solid fa-phone"></i>
           </div>
@@ -468,7 +693,7 @@ display: block;
           </div>
       </div>
 
-      <div id="email" style="margin-bottom: 4%;">
+      <div class="email-container" >
           <div class="icon-box">
             <i class="fa-solid fa-cake-candles"></i>
           </div>
@@ -477,19 +702,24 @@ display: block;
             <div>02-𝙰𝚞𝚐𝚞𝚜𝚝-2003</div>
           </div>
       </div>
-      <div id="email" style="margin-bottom: 7%; border-bottom: solid 1px white; padding-bottom: 10%;">
+      <div class="email-container" style="margin-bottom: 7%; border-bottom: solid 1px white; padding-bottom: 10%;">
           <div class="icon-box">
             <i class="fa-solid fa-location-dot" style=" font-size: 20px;"></i>
           </div>
           <div class="text-box">
             <div class="label">𝙻𝚘𝚌𝚊𝚝𝚒𝚘𝚗</div>
-            <div>𝙿𝚎𝚍𝚍𝚊𝚙𝚊𝚟𝚊𝚗𝚒, 𝙻𝚒𝚗𝚐𝚊 𝚂𝚊𝚖𝚞𝚍𝚛𝚊𝚖<br> 𝙼𝚊𝚗𝚍𝚊𝚕𝚊𝚖, 𝙽𝚎𝚕𝚕𝚘𝚛𝚎 𝙳𝚒𝚜𝚝𝚛𝚒𝚌𝚝, <br> 𝙰𝚗𝚍𝚑𝚛𝚊 𝙿𝚛𝚊𝚍𝚎𝚜𝚑</div>
+            <div>𝙿𝚎𝚍𝚍𝚊𝚙𝚊𝚟𝚊𝚗𝚒, 𝙻𝚒𝚗𝚐𝚊 𝚂𝚊𝚖𝚞𝚍𝚛𝚊𝚖<br> 𝙼𝚊𝚗𝚍𝚊𝚕𝚊𝚖, 𝙽𝚎𝚕𝚕𝚘𝚛𝚎 𝙳𝚒𝚜𝚝𝚛𝚒𝚌𝚝, <br> 𝙰𝚗𝚍𝚑𝚛𝚊 𝙿𝚛𝚊𝚍𝚎𝚜𝚑 </div>
           </div>
       </div>
-      <div>
-        <a href="https://www.instagram.com/prudhvikumar___523/?next=%2F"  target="_blank"><img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-HD.png" alt="image" width="15%" height="13%" style="margin-right:5% ;"></a>
-        <a href="https://www.facebook.com/prudhvi.kumar.14606936"  target="_blank"><img src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-21.png" alt="image" width="10%" height="8%"></a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/prudhvikumar___523/?next=%2F" target="_blank">
+          <img src="https://www.pngmart.com/files/13/Instagram-Logo-PNG-HD.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/prudhvi.kumar.14606936" target="_blank">
+          <img src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-transparent-png-pictures-icons-and-21.png" alt="Facebook">
+        </a>
       </div>
+
     </div>
     <div class="box" id="box">
       <h1 style="text-align: center;">𝙸𝚗𝚝𝚎𝚛𝚗𝚜𝚑𝚒𝚙</h1>

@@ -21,42 +21,7 @@
     }
 
     /* Header / Navbar */
-    header {
-  background: #333;
-  color: white;
-  padding: 20px 0;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-left: 2%;
-}
-
-header .subtitle {
-  margin-left: 1%;
-  color: #a45a3d;
-}
-
-header .nav-links {
-  margin-left: 48%;
-  color: #9a8c9a;
-}
-
-header .nav-links a {
-  text-decoration: none;
-  color: #9a8c9a;
-  margin: 0 4px;
-}
-
-header .nav-links i {
-  color: red;
-}
-
+   
     /* Layout */
     main {
       display: flex;
@@ -306,37 +271,82 @@ header .nav-links i {
 }
 
 /* ===== Mobile (Below 600px) ===== */
- @media (max-width: 600px) {
+/* General Header Styling */
+header {
+  background: #333;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Flex container: name left, links right */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping if space runs out */
+}
+
+/* Name + subtitle */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #a45a3d;
+  font-size: 1rem;
+}
+
+/* Navigation links */
+.nav-links a {
+  text-decoration: none;
+  color: #9a8c9a;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Responsive but same layout */
+@media (max-width: 600px) {
   .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
   }
 
-  header h1 {
-    font-size: 1.4rem;
-    margin: 0;
+  .logo h1 {
+    font-size: 1.3rem;
   }
 
-  header .subtitle {
-    font-size: 1rem;
-    margin: 5px 0;
+  .subtitle {
+    font-size: 0.9rem;
   }
 
-  header .nav-links {
-    margin: 10px 0 0 0;
-    padding-left: 20px; /* shifts links slightly left */
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
   }
 
-  header .nav-links a {
-    display: block; /* one per line */
-    font-size: 1rem;
-    margin: 4px 0;
+  .nav-links a {
+    font-size: 0.9rem;
   }
 
-  header .nav-links i {
-    display: none; /* hide the ♥ dividers for clean mobile look */
-  }
   .sidebar {
     width: 200px;
   }
@@ -394,18 +404,21 @@ header .nav-links i {
 <body style="background-color:#333">
  
 
-  <header>
+<header>
   <div class="header-container">
-    <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
-    <i class="subtitle">𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
-    <p class="nav-links">
-      <a href="po1.html#home">🅗🅞🅜🅔</a> <i> ♥|</i>
-      <a href="project.html" class="active">🄿🅁🄾🄹🄴🄲🅃</a><i> ♥|</i>
-      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a><i> ♥|</i>
-      <a href="#profileBtn" id="profileBtn">p͓̽r͓̽o͓̽f͓̽i͓̽l͓̽e͓̽</a>
-    </p>
+    <div class="logo">
+      <h1>Ṗṛüḋḧṿïḳüṁäṛ</h1>
+      <i class="subtitle">𝓹𝓸𝓻𝓽𝓯𝓸𝓵𝓲𝓸</i>
+    </div>
+    <nav class="nav-links">
+      <a href="po1.html#home">🅗🅞🅜🅔</a>
+      <a href="project.html">🄿🅁🄾🄹🄴🄲🅃</a>
+      <a href="internship.html">𝒾ℕ𝐭ⓔℝℕ丂ｈ𝒾ᑭ</a>
+      <a href="#profileBtn" id="profileBtn">ρrσfílє</a>
+    </nav>
   </div>
 </header>
+
 
 
    

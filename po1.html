@@ -178,73 +178,122 @@
       margin-top: 15%;
     }
     
+
 .skills {
   text-align: center;
   color: white;
-  padding: 50px 20px;
+  padding: 60px 20px;
   font-family: "Segoe UI", sans-serif;
+  background: #333; 
 }
 
 .skills h1 {
   color: #18CC9C;
-  margin-bottom: 40px;
-  font-size: 2rem;
+  margin-bottom: 50px;
+  font-size: 2.3rem;
+  position: relative;
 }
 
+.skills h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #18CC9C;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* 🔳 Skill cards layout using Flexbox */
 .skills-grid {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 35px;
+  width: 85%;
+  margin: 0 auto;
 }
 
+
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(24, 204, 156, 0.3);
+  box-shadow: 0 0 15px rgba(24, 204, 156, 0.25);
   padding: 20px;
   width: 180px;
   height: 180px;
-  transition: 0.3s ease;
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(6px);
 }
 
 .skill-card img {
   width: 70%;
-  height: 70%;
+  height: auto;
   object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
 .skill-card p {
   color: #18CC9C;
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: bold;
   text-transform: capitalize;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 .skill-card:hover {
-  transform: scale(1.08);
+  transform: translateY(-10px) scale(1.05);
   background: rgba(24, 204, 156, 0.15);
+  box-shadow: 0 0 25px rgba(24, 204, 156, 0.4);
 }
 
-/* Remove link underline */
+.skill-card:hover img {
+  transform: scale(1.1);
+}
+
+
 .skills-grid a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+/* 📱 Tablet view */
+@media (max-width: 992px) {
   .skills-grid {
+    width: 90%;
+    gap: 25px;
+  }
+
+  .skill-card {
+    width: 160px;
+    height: 160px;
+  }
+
+  .skills h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
   }
 
   .skill-card {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
+    padding: 15px;
+  }
+
+  .skill-card img {
+    width: 60%;
   }
 
   .skills h1 {
@@ -252,25 +301,20 @@
   }
 }
 
-@media (max-width: 600px) {
+/* 📱 Extra small phones */
+@media (max-width: 400px) {
   .skills-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px; 
+    flex-direction: column;
+    gap: 15px;
   }
 
   .skill-card {
-    flex: 1 1 calc(25% - 10px); 
-    max-width: 120px;            
-    height: 120px;
-    padding: 10px;
+    width: 80%;
+    height: auto;
   }
 
   .skill-card img {
-    width: 70%;
-    height: 70%;
+    width: 55%;
   }
 
   .skills h1 {
